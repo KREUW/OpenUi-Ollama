@@ -47,8 +47,9 @@ docker build -t openui-ollama /path/to/dockerfile/directory
 
 ### Run the Docker container:
 ```sh
-docker run -d -p 3000:8080 openui-ollama
+docker run -d -p 3000:8080 --name 'nameit' -- ghcr.io/kreuw/openui-ollama
 ```
+
 Access the application at http://localhost:3000.
 
 ## Docker Image
