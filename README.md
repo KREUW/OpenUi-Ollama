@@ -31,6 +31,9 @@ This version of the container includes the following modifications:
 Clone the repository to your local machine:
 ```sh
 git clone https://github.com/KREUW/OpenUi-Ollama.git
+```
+
+```sh
 cd OpenUi-Ollama
 ```
 
@@ -39,8 +42,9 @@ To start using OpenUi-Ollama, follow these steps:
 
 ### Build the Docker image:
 ```sh
-docker build -t openui-ollama
+docker build -t openui-ollama /path/to/dockerfile/directory
 ```
+
 ### Run the Docker container:
 ```sh
 docker run -d -p 3000:8080 openui-ollama
@@ -52,8 +56,12 @@ The Docker image is hosted on GitHub Container Registry. You can pull and run th
 
 ```sh
 docker pull ghcr.io/kreuw/openui-ollama:latest
+```
+
+```sh
 docker run -d -p 3000:8080 ghcr.io/kreuw/openui-ollama:latest
 ```
+
 ## Deploy to Azure
 To deploy the Docker image to Azure, follow these steps:
 
@@ -62,40 +70,48 @@ To deploy the Docker image to Azure, follow these steps:
 ```sh
 az login
 ```
+
 ### Create a Resource Group:
 
 ```sh
 az group create --name myResourceGroup --location eastus
 ```
+
 ### Create a Container Registry:
 
 ```sh
 az acr create --resource-group myResourceGroup --name myContainerRegistry --sku Basic
 ```
+
 ### Login to the Container Registry:
 
 ```sh
 az acr login --name myContainerRegistry
 ```
+
 ### Tag the Docker Image:
 
 ```sh
 docker tag openui-ollama:latest mycontainerregistry.azurecr.io/openui-ollama:latest
 ```
+
 ### Push the Docker Image to Azure Container Registry:
 
 ```sh
 docker push mycontainerregistry.azurecr.io/openui-ollama:latest
 ```
+
 ### Create a Container Instance:
 ```sh
 az container create --resource-group myResourceGroup --name openui-ollama-container --image mycontainerregistry.azurecr.io/openui-ollama:latest --cpu 2 --memory 4 --registry-login-server mycontainerregistry.azurecr.io --registry-username <username> --registry-password <password> --ip-address public --ports 8080
 ```
+
 ##Get the assinged Public IP Address:
 
 ```sh
 az container show --resource-group myResourceGroup --name openui-ollama-container --query ipAddress.ip --output tsv
 ```
+
 ## Access the Application:
 Open a web browser and navigate to the **public IP address obtained in the previous step with the assigned port**.
 
