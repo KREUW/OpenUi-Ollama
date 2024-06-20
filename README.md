@@ -38,7 +38,7 @@ cd OpenUi-Ollama
 ```
 
 ## Usage
-To start using OpenUi-Ollama, follow these steps:
+To start using OpenUi-Ollama on your host complete the follow these steps:
 
 ### Build the Docker image:
 ```sh
@@ -49,8 +49,9 @@ docker build -t openui-ollama /path/to/dockerfile/directory
 ```sh
 docker run -d -p 3000:8080 --name 'nameit' -- ghcr.io/kreuw/openui-ollama
 ```
+####QOpenwed UI is mapped to port 3000 and the Ollama backend is mapped to port 8080 in the container
 
-Access the application at http://localhost:3000.
+####Access the application at http://localhost:3000.
 
 ## Docker Image
 The Docker image is hosted on GitHub Container Registry. You can pull and run the image using the following commands:
