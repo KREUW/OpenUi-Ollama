@@ -2,30 +2,31 @@
 
 This repository contains the Docker image for OpenUi-Ollama, a customized container including OpenWeb UI, Ollama, Python. The Git repository is integrated into the backend along with Python 3.2 to allow pulls from the Ollama repo.
 
-## Table of Contents
-- Overview
-- Features
-- Changes from Original
-- Installation
-- Usage
-- Docker Image
-- Deploy to Azure
+  ## Table of Contents
+  - Overview
+  - Features
+  - Changes from Original
+  - Installation
+  - Usage
+  - Docker Image
+  - Deploy to Azure
 
-## Overview
-OpenUi-Ollama is designed to provide an easy-to-deploy container environment that integrates OpenWeb UI with Ollama capabilities. This setup is ideal for developers looking to streamline their deployment process by combining both tools into a single, cohesive Docker image with the backend git repos pull built in.
+  ## Overview
+  OpenUi-Ollama is designed to provide an easy-to-deploy container environment that integrates OpenWeb UI with Ollama capabilities. This setup is ideal for developers looking to streamline their deployment process
+  by combining both tools into a single, cohesive Docker image with the backend git repos pull built in.
+  
+  ## Features
+  - **Integrated OpenWeb UI**: Provides a web-based interface for interacting with the application.
+  - **Ollama Repository Integration**: Allows seamless pulls and integration from the Ollama repository.
+  - **Python 3.2 Support**: Ensures compatibility and allows for advanced scripting and automation tasks.
+  - **Pre-configured Docker Environment**: Simplifies deployment with all necessary dependencies included.
 
-## Features
-- **Integrated OpenWeb UI**: Provides a web-based interface for interacting with the application.
-- **Ollama Repository Integration**: Allows seamless pulls and integration from the Ollama repository.
-- **Python 3.2 Support**: Ensures compatibility and allows for advanced scripting and automation tasks.
-- **Pre-configured Docker Environment**: Simplifies deployment with all necessary dependencies included.
-
-## Changes from Original
-This version of the container includes the following modifications:
-- **Integration of OpenWeb UI and Ollama**: Combines functionalities of both tools.
-- **Inclusion of Python 3.2**: Supports pulls from the Ollama repository and additional scripting.
-- **Pre-configured Docker Environment**: Ready-to-use setup with all dependencies.
-- **Port Configuration**: Runs on port 8080 internally and mapped to port 3000 externally for accessibility.
+  ## Changes from Original
+  This version of the container includes the following modifications:
+  **Integration of OpenWeb UI and Ollama**: Combines functionalities of both tools.
+  **Inclusion of Python 3.2**: Supports pulls from the Ollama repository and additional scripting.
+  **Pre-configured Docker Environment**: Ready-to-use setup with all dependencies.
+  **Port Configuration**: Runs on port 8080 internally and mapped to port 3000 externally for accessibility.
 
 ## Installation
 Clone the repository to your local machine:
