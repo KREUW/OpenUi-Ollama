@@ -39,7 +39,6 @@ To start using OpenUi-Ollama, follow these steps:
 
 ### Build the Docker image:
 ```sh
-Copy code
 docker build -t openui-ollama
 ```
 ### Run the Docker container:
